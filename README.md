@@ -44,4 +44,41 @@ This application includes a wide range of modern features:
 - Multer (for file uploads)  
 
 ### **Database**
-- MongoDB (Local or Atlas)  
+- MongoDB (Local or Atlas)
+- 
+For **Private routes**, a **Bearer Token** obtained from the login endpoint must be included in the **Authorization header** of the request.
+
+| **Endpoint** | **Method** | **Description** | **Access** |
+|--------------|------------|-----------------|------------|
+| `/api/auth/register` | POST | Register a new user | Public |
+| `/api/auth/login` | POST | Authenticate a user & get token | Public |
+| `/api/posts` | POST | Create a new blog post | Private |
+| `/api/posts` | GET | Get all posts (paginated) | Public |
+| `/api/posts/:id` | GET | Get a single post by ID | Public |
+| `/api/posts/:id` | PUT | Update a post | Private |
+| `/api/posts/:id` | DELETE | Delete a post | Private |
+| `/api/posts/:id/comments` | POST | Add a comment to a post | Private |
+| `/api/posts/search/:keyword` | GET | Search posts by title | Public |
+| `/api/posts/user/:userId` | GET | Get all posts by a specific user | Public |
+| `/api/users/:id` | GET | Get a user's public profile | Public |
+| `/api/upload` | POST | Upload an image file (Used by protected frontend) | Private |
+
+---
+
+## **🚀 Getting Started**
+
+Follow these steps to set up a local development environment:
+
+### **Prerequisites**
+- Install [Node.js](https://nodejs.org/) on your machine.  
+
+### **Clone the Repository**
+```bash
+git clone https://github.com/vakrahul/Blog-platform.git
+cd Blog-platform
+
+cd web-frontend
+npm install
+cd backend
+npm install
+
