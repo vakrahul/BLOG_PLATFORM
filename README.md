@@ -154,9 +154,87 @@ Follow these instructions to set up the project locally.
 
 ## 📂 Project Structure
 
-This project uses a monorepo structure:. ├── backend/ # Node.js/Express API │ ├── src/ │ │ ├── config/ │ │ ├── controllers/ │ │ ├── middleware/ │ │ ├── models/ │ │ ├── routes/ │ │ └── utils/ │ ├── uploads/ # Directory for uploaded images │ ├── .env # Backend environment variables (needs creation) │ ├── package.json │ └── server.js # Main backend entry point │ ├── web-frontend/ # React Client Application │ ├── public/ │ ├── src/ │ │ ├── app/ # Redux store setup │ │ ├── components/ # Reusable UI components │ │ ├── features/ # Redux slices and services │ │ ├── pages/ # Page-level components │ │ ├── styles/ # SCSS files │ │ ├── App.jsx │ │ └── main.jsx # Main frontend entry point │ ├── .env # Frontend environment variables (needs creation) │ ├── index.html │ ├── package.json │ └── vite.config.js │ └── README.md # This file
-
----
+BLOG_PLATFORM/
+├── backend/
+│   └── ...
+├── web-frontend/           # React Client Application (Vite)
+│   ├── public/
+│   │   └── vite.svg
+│   ├── src/
+│   │   ├── app/
+│   │   │   └── store.js        # Redux store setup
+│   │   ├── components/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Meta.jsx        # For setting page titles/meta tags
+│   │   │   ├── Paginate.jsx    # Pagination component
+│   │   │   ├── PostItem.jsx    # Component for displaying a single post preview
+│   │   │   ├── SearchBox.jsx   # Search input component
+│   │   │   ├── Spinner.jsx     # Loading indicator
+│   │   │   └── SplashWelcome.jsx # Welcome animation/message
+│   │   ├── features/
+│   │   │   ├── auth/           # Authentication related Redux logic
+│   │   │   ├── posts/          # Post related Redux logic
+│   │   │   └── users/          # User related Redux logic
+│   │   ├── pages/
+│   │   │   ├── CreatePostPage.jsx
+│   │   │   ├── EditPostPage.jsx
+│   │   │   ├── EditProfile.jsx
+│   │   │   ├── HomePage.jsx
+│   │   │   ├── LoginPage.jsx
+│   │   │   ├── PostPage.jsx    # Displays a single full post
+│   │   │   ├── ProfilePage.jsx
+│   │   │   └── RegisterPage.jsx
+│   │   ├── styles/
+│   │   │   └── main.scss     # Main SCSS file
+│   │   ├── App.jsx         # Main application component with routing
+│   │   └── main.jsx        # Frontend entry point, renders App
+│   ├── .env              # (Needs Creation) Frontend environment variables
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html        # HTML template for Vite
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js    # Vite configuration
+BLOG_PLATFORM/
+├── backend/
+│   └── ...
+├── web-frontend/           # React Client Application (Vite)
+│   ├── public/
+│   │   └── vite.svg
+│   ├── src/
+│   │   ├── app/
+│   │   │   └── store.js
+│   │   ├── components/
+│   │   │   └── ... (files as listed above)
+│   │   ├── features/
+│   │   │   ├── auth/
+│   │   │   │   ├── authService.js # API calls for auth
+│   │   │   │   └── authSlice.js   # Redux slice for auth state
+│   │   │   ├── posts/
+│   │   │   │   ├── postService.js # API calls for posts
+│   │   │   │   └── postSlice.js   # Redux slice for post state
+│   │   │   └── users/
+│   │   │       ├── userService.js # API calls for users
+│   │   │       └── userSlice.js   # Redux slice for user state
+│   │   ├── pages/
+│   │   │   └── ... (files as listed above)
+│   │   ├── styles/
+│   │   │   └── main.scss
+│   │   ├── App.jsx
+│   │   └── main.jsx
+│   ├── .env              # (Needs Creation) Frontend environment variables
+│   ├── .gitignore
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── package-lock.json
+│   ├── package.json
+│   └── vite.config.js
+BLOG_PLATFORM/
+├── backend/
+│   └── ...
+├── web-frontend/
+│   └── ...
+└── README.md               # The main project README file
 
 <p align="center">
   Happy Blogging! 🎉
